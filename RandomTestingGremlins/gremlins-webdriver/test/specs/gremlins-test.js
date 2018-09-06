@@ -35,9 +35,13 @@ function unleashGremlins(ttl, callback) {
   var horde = window.gremlins.createHorde();
   horde.gremlin(formFiller);
   horde.gremlin(clicks);
-
   horde.seed(1234);
   horde.after(callback);
+  horde.strategy(window.gremlins.strategies.distribution()
+    .delay(50) // wait 50 ms between each action
+    .distribution([0.3, 0.7]) // the first three gremlins have more chances to be executed than the last
+  );
+
   window.onbeforeunload = stop;
   setTimeout(stop, ttl);
   horde.unleash();
