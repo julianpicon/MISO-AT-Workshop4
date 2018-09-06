@@ -25,8 +25,16 @@ function unleashGremlins(ttl, callback) {
         return isTextType && !element.hidden;
   });
 
+  var clicks = window.gremlins.species.clicker().clickTypes(['click']);
+
+  clicks.canClick(function(element){
+    var caDoClick = element.type=="button" || element.tagName=="A";
+    return caDoClick && !element.hidden;
+  });
+
   var horde = window.gremlins.createHorde();
   horde.gremlin(formFiller);
+  horde.gremlin(clicks);
 
   horde.seed(1234);
   horde.after(callback);
