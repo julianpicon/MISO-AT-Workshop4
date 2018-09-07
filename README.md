@@ -33,3 +33,16 @@ Trabajo propuesto:
 
 
 ## UI/Application Exerciser Monkey en Android
+
+Consulta Devices
+
+![Screenshot](./MonkeyEnAndroid/screenshots/ConsultaDevices.png)
+
+
+Random Testing TransmiSITP
+
+![Screenshot](./MonkeyEnAndroid/screenshots/RandomTesting_TransmiSITP.gif)
+
+Random Testing OmniNotes (App del proyecto)
+
+![Screenshot](./MonkeyEnAndroid/screenshots/MonkeyTestinOmniNotes.gif)
